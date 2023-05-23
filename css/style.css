@@ -12,6 +12,9 @@
 --accent-color:#4D5AE5;
 --footer-social-hover:#31D0AA;
 --color-icons:#8E8F99;
+--color-modal-btn:#E7E9FC;
+--background-color-modal-window:#FCFCFC;
+
 }
 
 .list {
@@ -53,7 +56,7 @@ body {
 	background-color: var(--third-color-background);
 }
 
-/* =====================COMPONENTS============================ */
+/* ===========COMPONENTS======================== */
 .logo{
 margin-right: 76px;
 font-family: var(--secondary-font);
@@ -76,9 +79,9 @@ padding-right: 15px;
 
 }
 
-/* =====================COMPONENTS========================= */
+/* ================COMPONENTS==================== */
 
-/* =====================HEADER================================ */
+/* ================HEADER======================= */
 .page-header-content{
 	padding-top: 24px;
 	padding-bottom: 24px;
@@ -127,6 +130,8 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 
 color: var(--primary-text-color-teme-light);
+
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -134,9 +139,37 @@ color: var(--primary-text-color-teme-light);
 .menu-link:active {
 color: var(--menu-link-color);
 }
+
+.menu-link{
+	position: relative;
+}
+
+.menu-link::after{
+	content: "";
+	display: block;
+	position: absolute;
+	
+	width: 100%;
+	height: 4px;
+	left: 0;
+	bottom: 0;
+	/* top: 44px; */
+
+	background-color: var(--menu-link-color);
+	border-radius: 2px;
+	opacity: 0;
+}
+
+.menu-link:hover::after{
+	opacity: 1;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .address{
 font-style: normal;
 margin-left: auto;
+
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-information-link{
 font-family: var(--primary-font);
@@ -146,23 +179,22 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--secondary-text-color-teme-light);
 }
-/* .email-contacts{
-	margin-right: 40px;
-} */
 .address :hover,
 .address :focus,
 .address :active{
 	color: var(--menu-link-color);
 }
 
-/* =====================HEADER================================ */
+/* =================HEADER======================= */
 
-/* =========================HERO============================== */
+/* =================HERO======================== */
 .hero {
 	background-color: var(--dark-color-backgraund);
 	padding-top: 188px;
 	padding-bottom: 188px;
 
+
+	margin: auto;
 	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)) ,url(../images/bg/people-office-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -208,9 +240,10 @@ color: var(--primary-text-color-teme-dark);
 	border-radius: 4px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border: none;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ================================ABOUT======================== */
+/* ====================ABOUT=================== */
 .about-section{
 	padding-top: 120px;
 	padding-bottom: 120px;
@@ -253,7 +286,7 @@ color: var(--secondary-text-color-teme-light);
 	gap: 24px;
 	margin-bottom: 8px;
 }
-/* ==============================================WORK========================= */
+/* ===================WORK===================== */
 .section-work{
 	padding-bottom: 120px;
 }
@@ -275,9 +308,9 @@ margin-bottom: 72px;
 .galary-work-list{
 	flex-basis: calc((100%-48)/3);
 }
-/* ==============================================WORK========================= */
+/* ==================WORK==================== */
 
-/* ==============================================OURTEAM========================== */
+/* ================OURTEAM=================== */
 .ourteam-section{
 	background-color: var(--secondary-color-bacground);
 	padding-top: 120px;
@@ -338,7 +371,6 @@ color: var(--secondary-text-color-teme-light);
 }
 .social-item-list{
 	display: flex;
-	/* padding: 32px 0 32px; */
 	justify-content: center;
 	gap: 24px;
 }
@@ -350,6 +382,8 @@ color: var(--secondary-text-color-teme-light);
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-menu-list :hover,
@@ -367,9 +401,9 @@ color: var(--secondary-text-color-teme-light);
 }
 
 
-/* =====================================OURTEAM========================== */
+/* ==========OURTEAM========================== */
 
-/* ====================================CUSTOMERS======================== */
+/* =========CUSTOMERS======================== */
 .section-customers{
 	padding-top: 120px;
 	padding-bottom: 120px;
@@ -400,6 +434,7 @@ color: var(--primary-text-color-teme-light);
 	border: 1px solid var(--color-icons);
 	border-radius: 4px;
 	color: var(--color-icons);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-menu :hover,
@@ -416,9 +451,9 @@ color: var(--primary-text-color-teme-light);
 	fill: currentColor;
 }
 
-/* ====================================ALLSERVISES================================ */
+/* ================ALLSERVISES================== */
 
-/* ===================================MENU----BUTTON=============================== */
+/* ==============MENU--BUTTON=================== */
 
 
 .galary-button {
@@ -437,6 +472,7 @@ border-radius: 4px;
 
 color: var(--accent-color);
 background-color: var(--secondary-color-bacground);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .galary-menu :hover,
 .galary-menu :focus {
@@ -452,7 +488,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 	gap: 24px;
 	margin-bottom: 72px;
 }
-/* ===================================MENU  BUTTON=============================== */
+/* =================MENU---BUTTON============== */
 .galary{
 	padding-top: 96px;
 	padding-bottom: 120px;
@@ -486,6 +522,37 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 .servis-group-link{
 	display: block;
 }
+.servis-link-wrapper{
+	position: relative;
+	overflow: hidden;
+
+}
+.overlay{
+font-family:var(--primary-font);
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+
+color: var(--secondary-text-color-teme-dark);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 40px 32px 164px;
+	background-color: var(--accent-color);
+	overflow: auto;
+	transform: translateY(100%);
+
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.servis-group-link:hover .overlay,
+.servis-group-link:focus .overlay{
+	transform: translateY(0%);
+}
 .servis-group-discription{
 margin-bottom: 8px;
 font-weight: 500;
@@ -507,6 +574,7 @@ color: var(--secondary-text-color-teme-light);
 	width: 360px;
 	border: 1px solid #E7E9FC;
 	border-top: none;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .servis-group:hover,
@@ -514,9 +582,9 @@ color: var(--secondary-text-color-teme-light);
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 	}
 
-/* ====================================ALLSERVISES================================ */
+/* ================ALLSERVISES================= */
 
-/* ==================================FOOTER===================================== */
+/* =================FOOTER===================== */
 .all-footer-container{
 	display: flex;
 	align-items: baseline;
@@ -559,7 +627,7 @@ color: var(--secondary-text-color-teme-dark);
 	margin-bottom: 16px;
 	display: inline-block;
 }
-/* ========================social-media========================= */
+/* ================SOCIAL---MEDIA============ */
 .footer-social-container{
 	display: flex;
 	flex-direction: column;
@@ -589,6 +657,7 @@ margin-bottom: 16px;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list-icon :hover,
@@ -598,4 +667,62 @@ margin-bottom: 16px;
 
 .footer-social-icon{
 	fill: var(--secondary-color-bacground);
+}
+
+/* ================MODAL--CLOSE================== */
+.backdrop{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%; 
+	height: 100%;
+	background-color:rgba(46, 47, 66, 0.4);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+
+
+}
+.modal{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 408px;
+	height: 584px;
+	background-color: var(--background-color-modal-window);
+}
+.modal-close-icon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal-close-btn{
+	position:absolute;
+	top:24px;
+	right:24px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:24px;
+	height:24px;
+	padding-left:0;
+	padding-right:0;
+	background-color:transparent;
+	background-color: var(--color-modal-btn);
+	border:1px solid rgba(0, 0, 0, 0.1);
+	border-radius:50%;
+}
+
+.modal-close-btn:active{
+background-color: var(--menu-link-color);
+color: var(--primary-text-color-teme-dark);
+}
+.modal-close-icon:active{
+	fill: var(--primary-text-color-teme-dark);
+}
+.is-hidden{
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
 }
