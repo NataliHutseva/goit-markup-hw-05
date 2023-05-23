@@ -710,8 +710,6 @@ margin-bottom: 16px;
 	justify-content:center;
 	width:24px;
 	height:24px;
-	/* padding-left:0;
-	padding-right:0; */
 	padding: 0;
 	background-color:transparent;
 	background-color: var(--color-modal-btn);
@@ -727,7 +725,7 @@ border: none;
 }
 .modal-close-icon:hover,
 .modal-close-icon:focus{
-	fill: var(--primary-text-color-teme-dark);
+fill: var(--primary-text-color-teme-dark);
 }
 .is-hidden{
 	opacity: 0;
