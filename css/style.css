@@ -122,7 +122,7 @@ color: var(--primary-text-color-teme-light);
 
 }
 .menu-link{
-	position: relative;
+position: relative;
 padding-top: 24px;
 padding-bottom: 24px;
 font-weight: 500;
@@ -131,9 +131,7 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 
 color: var(--primary-text-color-teme-light);
-
 transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-/* transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .menu-link:hover,
 .menu-link:focus,
@@ -157,19 +155,14 @@ color: var(--menu-link-color);
 
 .menu-link:hover::after{
 	opacity: 1;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address{
 font-style: normal;
 margin-left: auto;
 }
-.address-list{
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-/* .menu-contacts{
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
 .contacts-information-link{
 font-family: var(--primary-font);
 font-weight: 400;
@@ -177,6 +170,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--secondary-text-color-teme-light);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address :hover,
 .address :focus,
@@ -239,7 +233,7 @@ color: var(--primary-text-color-teme-dark);
 	border-radius: 4px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border: none;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ====================ABOUT=================== */
@@ -382,7 +376,7 @@ color: var(--secondary-text-color-teme-light);
 	height: 40px;
 	border-radius: 50%;
 
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-menu-list :hover,
@@ -433,7 +427,7 @@ color: var(--primary-text-color-teme-light);
 	border: 1px solid var(--color-icons);
 	border-radius: 4px;
 	color: var(--color-icons);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-menu :hover,
@@ -473,6 +467,10 @@ color: var(--accent-color);
 background-color: var(--secondary-color-bacground);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.galary-menu{
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .galary-menu :hover,
 .galary-menu :focus {
 color: var(--primary-text-color-teme-dark);
@@ -486,6 +484,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 	justify-content:center ;
 	gap: 24px;
 	margin-bottom: 72px;
+
 }
 /* =================MENU---BUTTON============== */
 .galary{
@@ -656,7 +655,7 @@ margin-bottom: 16px;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list-icon :hover,
@@ -679,7 +678,7 @@ margin-bottom: 16px;
 	opacity: 1;
 	visibility: visible;
 	pointer-events: auto;
-	transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -693,7 +692,7 @@ margin-bottom: 16px;
 	background-color: var(--background-color-modal-window);
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-icon{
 	display: flex;
@@ -720,7 +719,7 @@ margin-bottom: 16px;
 .modal-close-btn:hover,
 .modal-close-btn:focus{
 background-color: var(--menu-link-color);
-color: var(--primary-text-color-teme-dark);
+fill: var(--primary-text-color-teme-dark);
 border: none;
 }
 .modal-close-icon:hover,
