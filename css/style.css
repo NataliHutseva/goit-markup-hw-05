@@ -434,7 +434,7 @@ color: var(--primary-text-color-teme-light);
 	border: 1px solid var(--color-icons);
 	border-radius: 4px;
 	color: var(--color-icons);
-	transition: border var(--transition), color var(--transition);
+	transition: border-color var(--transition), color var(--transition);
 }
 
 .customers-menu :hover,
@@ -475,10 +475,10 @@ color: var(--accent-color);
 background-color: var(--secondary-color-bacground);
 transition: transform var(--transition);
 transition: color 250ms var(--transition);
-transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
+transition: color var(--transition), background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 .galary-menu{
-transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
+transition: color var(--transition), background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 .galary-menu :hover,
 .galary-menu :focus {
