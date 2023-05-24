@@ -139,8 +139,8 @@ transition: color var(--transition);
 color: var(--menu-link-color);
 }
 .current{
-color: var(--transition);
 position: relative;
+color: var(--transition);
 }
  
 .current::after{
@@ -236,12 +236,13 @@ color: var(--primary-text-color-teme-dark);
 	color: var(--primary-text-color-teme-dark);
 	background-color: var(--accent-color);
 	border-radius: 4px;
-	transition: bacground-color var(--transition);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border: none;
 	
 }
-
+.color-btn{
+	transition: bacground-color var(--transition);
+}
 /* ====================ABOUT=================== */
 .about-section{
 	padding-top: 120px;
@@ -492,7 +493,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
 	justify-content:center ;
 	gap: 24px;
 	margin-bottom: 72px;
-
+	transition: color var(--transition), background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 /* =================MENU---BUTTON============== */
 .galary{
@@ -688,7 +689,7 @@ margin-bottom: 16px;
 	opacity: 1;
 	visibility: visible;
 	pointer-events: auto;
-	transition: opasity var(--transition), visibility var(--transition);
+	transition: opacity var(--transition), visibility var(--transition);
 
 
 }
