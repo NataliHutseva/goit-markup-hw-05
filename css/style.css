@@ -5,7 +5,7 @@
 --primary-text-color-teme-dark:#FFFFFF;
 --secondary-text-color-teme-light:#434455;
 --secondary-text-color-teme-dark:#F4F4FD;
---menu-link-color:#404BBF;
+--menu-link-color:#404bbf;
 --dark-color-backgraund:#2E2F42;
 --secondary-color-bacground:#F4F4FD;
 --third-color-background:#FFFFFF;
@@ -122,13 +122,10 @@ text-transform: uppercase;
 color: var(--primary-text-color-teme-light);
 
 }
-
 .current{
 position: relative;
-color: var(--transition);
 color: var(--menu-link-color);
 }
- 
 .current::after{
 	content: "";
 	display: block;
