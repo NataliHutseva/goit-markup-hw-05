@@ -220,7 +220,6 @@ color: var(--primary-text-color-teme-dark);
 .hero-button:hover,
 .hero-button:focus{
 	background-color: var(--menu-link-color);
-	transition: bacground-color var(--transition);
 }
 .hero-button {
 	display: block;
@@ -237,9 +236,10 @@ color: var(--primary-text-color-teme-dark);
 	color: var(--primary-text-color-teme-dark);
 	background-color: var(--accent-color);
 	border-radius: 4px;
+	transition: bacground-color var(--transition);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border: none;
-	transition: bacground-color var(--transition);
+	
 }
 
 /* ====================ABOUT=================== */
@@ -433,8 +433,7 @@ color: var(--primary-text-color-teme-light);
 	border: 1px solid var(--color-icons);
 	border-radius: 4px;
 	color: var(--color-icons);
-	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: border var(--transition), color var(--transition);
 }
 
 .customers-menu :hover,
@@ -449,6 +448,7 @@ color: var(--primary-text-color-teme-light);
 }
 .customers-icon{
 	fill: currentColor;
+	transition: border var(--transition), color var(--transition);
 }
 
 /* ================ALLSERVISES================== */
@@ -476,7 +476,9 @@ transition: transform var(--transition);
 transition: color 250ms var(--transition);
 transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
-
+.galary-menu{
+transition: background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
 .galary-menu :hover,
 .galary-menu :focus {
 color: var(--primary-text-color-teme-dark);
@@ -720,7 +722,7 @@ margin-bottom: 16px;
 	padding: 0;
 	background-color:transparent;
 	background-color: var(--color-modal-btn);
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--transition), border var(--transition);
 	border:1px solid rgba(0, 0, 0, 0.1);
 	border-radius:50%;
 }
