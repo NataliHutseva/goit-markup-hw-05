@@ -123,14 +123,25 @@ color: var(--primary-text-color-teme-light);
 
 }
 .current{
-position: relative;
-color: var(--menu-link-color);
+	color: #404bbf;
 }
+.menu-link{
+	position: relative;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--primary-text-color-teme-light);
+	transition: color var(--transition);
+	}
+
 .current::after{
 	content: "";
 	display: block;
 	position: absolute;
-	
+		
 	width: 100%;
 	height: 4px;
 	left: 0;
@@ -139,18 +150,8 @@ color: var(--menu-link-color);
 	background-color: var(--menu-link-color);
 	border-radius: 2px;
 	opacity: 0;
-}
-.menu-link{
-	padding-top: 24px;
-	padding-bottom: 24px;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
-	
-	color: var(--primary-text-color-teme-light);
-	transition: color var(--transition);
 	}
+
 	.menu-link:hover,
 	.menu-link:focus,
 	.menu-link:active {
